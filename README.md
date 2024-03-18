@@ -11,7 +11,7 @@ Welcome to the repository for making your own knee joint concept demonstrator de
 <img src="assets/leg_side_b_white_clean_crop.png" alt="drawing" width="500"/>
 
 ## Mechanical hardware summary
-To make things accessible for as many as possible, the design focuses heavily on field deposition modeling (FDM) 3D printable parts using a single extruder. Other items, like specialty parts, are described below. Fasteners are depicted in the CAD model. Mechanical and electronics assembly guidelines are provided separately.
+To make things accessible for as many as possible, the design focuses heavily on field deposition modeling (FDM) 3D printable parts using a single extruder. Other items, like specialty parts, are described below. Fasteners are depicted in the CAD model. Mechanical and electronics assembly guidelines are provided separately. Refer [/CAD](CAD/).
 
 ### Manufactured parts
 These mechanical parts do require workshop fabrication:
@@ -37,9 +37,16 @@ These mechanical parts do require workshop fabrication:
 
 You will need to source a suitable spring (or two) for the latching solenoid. An example design is provided [here](CAD/SPRING.PDF).
 
+## Electronics summary
+Schematics and Gerber files to let you DIY electronics presented in the conference paper are provided in [/electronics](electronics/). The associated Python code (executable on a Raspberry Pi) are available in [/code](code/). Prescribed methods piggyback on 5V I2C communication protocol; remember to include a level shifter if using a Raspberry Pi. Shielded cabling mitigates EMI. However, you can use any method to operate the knee joint. Feel free to adapt and use your own devices if desired.
 
+### Motor and solenoid driver (DRIVER_KNEE_V5)
+Select your own feedback current resistor values (R_FB) corresponding to R_M1 to R_M4 on the schematic. These should be populated – even if you do not intend to measure current. Nominal values provided are for reference only.
 
+### Knee joint angle sensing (ENCODER)
+A small radial magnet is necessary to complement this Hall-effect sensor. Adapt the CAD files as necessary for the magnet you acquire.
+
+## Comments or suggestions
+[Submit a ticket](https://github.com/Cheng-Yueh/knee/issues)
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/-a_vLSxSMBE/0.jpg)](https://www.youtube.com/watch?v=-a_vLSxSMBE) 
-
-
