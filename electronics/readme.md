@@ -1,9 +1,17 @@
-# Electronics readme file
-Stuff here
-## Introduction
-stuff
+# Electronics
+Custom electronics were devised for driving this open source product. Two relevant PCBs are:
+*	Joint angle sensor (ENCODER): acquires the absolute angular position of the knee using a Hall-effect IC.
+*	Motors and solenoid driver (DRIVER_KNEE_V5): independently maintains constant actuation using built-in PWM functionality. Output current could be estimated on each of the four motor H-bridge channels.
+
+Both devices are managed using I2C (SMBus) protocol. Get your PCB and solder mask made with files in [/GERBER](GERBER/). Reflow soldering is recommended for the surface mount devices. Advise processing bottom layer before top layer. Refer [soldering schematic PDF](Soldering%20Schematics.pdf).
+
+Alternatively, modify and adapt the mechanical CAD model to suit your own electronics as you wish.
+
+<img src="/assets/knee_PCB_iso_white_crop.jpg" alt="drawing"/>
+
 ## ICs used
-Caveat emptor lorem ipsum.
+The tables exclude passive or connector components.
+
 ### DRIVER_KNEE_V5
 | IC name  | Description | Footprint | Quantity |
 | ------------- | ------------- | - | - |
@@ -15,5 +23,7 @@ Caveat emptor lorem ipsum.
 | IC name  | Description | Footprint | Quantity |
 | ------------- | ------------- | - | - |
 | AS5048B  | Magnetic Rotary Encoder (14-Bit Angular Position Sensor) | TSSOP14 | 1 |
-## Instructions
-more stuff
+
+## DRIVER_KNEE_V5 wiring
+Motor wiring configuration is separately outlined in <insert pdf>, which is compatible with the Python code provided. Other connections are tabulated below.
+
