@@ -8,7 +8,7 @@ Welcome to the repository for making your own knee joint concept demonstrator de
 *	Backdrivable
 *	Joint lockable when fully extended, and can remain locked without consuming any energy
 
-<img src="assets/leg_side_b_white_clean_crop.png" alt="drawing" width="500"/>
+<img src="assets/leg_side_b_white_clean_crop.png" alt="drawing"/>
 
 ## Mechanical hardware summary
 To make things accessible for as many as possible, the design focuses heavily on field deposition modeling (FDM) 3D printable parts using a single extruder. Other items, like specialty parts, are described below. Fasteners are depicted in the CAD model. Mechanical and electronics assembly guidelines are provided separately. Refer [/CAD](CAD/).
