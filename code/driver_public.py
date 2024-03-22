@@ -105,11 +105,10 @@ def set_motor(PCA9685_add, motor_pair_no, mode, duty, direction, delay = 0, disa
     
     # Modes when PWM is low:
     # 0: Brake low side slow decay
-    # 1: Coast high-z
+    # 1: Brake high side slow decay
     # direction: 0 forward, 1 reverse
     # duty: 0.0 to 1.0 float
     # delay: in ticks (0 to 4095)
-    # driver: 0 for knee, 1 for hip clutch/optiplus
     
     (D_add, IN1_add, IN2_add) = motor_reg_id(motor_pair_no, driver)
     if D_add is not None: write_LED_data(PCA9685_add, D_add, [0, 4096][::-2*disable+1]) # Enable/disable
