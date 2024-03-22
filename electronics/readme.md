@@ -40,3 +40,7 @@ Motor [wiring configuration](Wiring%20Configuration.pdf) is separately outlined,
 | SCL          | I2C clock line       | Computer/ microcontroller |                                              |
 | GND          | Ground               |                           | Common I2C and VM ground                     |
 
+## Caveats
+* All electronics could be manually soldered by hand. Any thermal pads underneath ICs must be connected!
+* Prepare suitably long cables. Excessive lengths may require I2C capacitance buffers / accelerators. Too short and you will experience poor cable management.
+* Plan cable connection points to facilitate modular (dis)assembly.
