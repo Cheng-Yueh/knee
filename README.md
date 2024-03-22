@@ -41,7 +41,7 @@ You will need to source a suitable spring (or two) for the latching solenoid. An
 Schematics and Gerber files to let you DIY electronics presented in the conference paper are provided in [/electronics](electronics/). The associated Python code (executable on a Raspberry Pi) are available in [/code](code/). Prescribed methods piggyback on 5V I2C communication protocol; remember to include a level shifter if using a Raspberry Pi. Shielded cabling mitigates EMI. However, you can use any method to operate the knee joint. Feel free to adapt and use your own devices if desired.
 
 ### Motor and solenoid driver (DRIVER_KNEE_V5)
-Select your own feedback current resistor values (R_FB) corresponding to R_M1 to R_M4 on the schematic. These should be populated – even if you do not intend to measure current. Nominal values provided are for reference only.
+Select your own feedback current resistor values (R<sub>FB</sub>) corresponding to R_M1 to R_M4 on the schematic. These should be populated – even if you do not intend to measure current. Nominal values provided are for reference only.
 
 ### Knee joint angle sensing (ENCODER)
 A small radial magnet is necessary to complement this Hall-effect sensor. Adapt the CAD files as necessary for the magnet you acquire.
