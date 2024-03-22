@@ -1,5 +1,5 @@
 # Code overview
-The default electronics provided can be operated using a Raspberry Pi using the two Python files:
+The default electronics provided can be operated using a Raspberry Pi using these Python files:
 * driver_public.py: drives the actuators (motors and latching solenoid).
 * encoder.py: retrieves joint angle readings from AS5048B.
 * pcf8591_public.py: retrieves raw ADC values for motor current estimation.
@@ -62,11 +62,23 @@ Parameters
 
 Returns int if output == ‘bit’, else float
 
+### pcf8591_public.py
+#### `set_mode(auto_inc = None, channel = None, PCF8591_add = PCF8591_ADD)`
+Initializes the ADC scanning mode, and returns the associated configuration mode value.
 
-# Holy code
-more stuff *italics* **bold font** and normal text
-``monospace text``
-and ````opoo````
+Parameters
+*	auto_inc(bool): True: sets ADC to automatically increment return values over each channel as defined in IC datasheet; False or None: disables ADC auto increment.
+*	channel(int): sets a single ADC channel (0 to 3) for returning values. Refer to IC datasheet.
+*	PCF8591_add(int): I2C address.
 
-### `initialize(PCA9685_add)`
-Executes much more
+Returns int
+
+#### `get_adc_values(mode = MODE, n = 1, PCF8591_add = PCF8591_ADD)`
+Reads and returns ADC values.
+
+Parameters
+*	mode(int): ADC scanning mode configuration value.
+*	n(int): number of times to read the ADC with defined mode.
+*	PCF8591_add(int): I2C address.
+
+Returns list
