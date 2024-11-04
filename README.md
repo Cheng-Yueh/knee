@@ -1,6 +1,6 @@
 # A Multi-Modal, Selectively Lockable, Compact, Affordable Knee Joint Assembly for Bipedal Robots
 <img src="assets/Open-source-hardware-logo.jpg" alt="drawing"/>
-Welcome to the repository for making your own knee joint concept demonstrator designed specifically for bipedal robots! The files provided here permit reproducing the knee joint as presented in 2024 IEEE-RAS International Conference on Humanoid Robots conference (to be confirmed). A video demonstrating the performance of this knee assembly is available at https://youtu.be/-a_vLSxSMBE.
+Welcome to the repository for making your own knee joint concept demonstrator designed specifically for bipedal robots! The files provided here permit reproducing the knee joint as presented in 2024 IEEE-RAS International Conference on Humanoid Robots conference. A video demonstrating the performance of this knee assembly is available at https://youtu.be/-a_vLSxSMBE.
 
 ### Key functionalities:
 *	Actuated bidirectional joint rotation
